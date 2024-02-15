@@ -1,0 +1,11 @@
+{% extends "templates/main/base.html" %}
+
+{% block contents %}
+
+<form style="width:100%" class="d-flex" method="POST" action="{% url 'search' %}">
+    {% csrf_token %}
+    <input class="form-control me-2" type="search" placeholder="성경 찾기" name="searched" aria-label="Search">
+    <button style="width: 40%" type="submit"> <span class="material-symbols-outlined">search</span> </button>
+</form>
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "templates/main/base.html" %}
+
+{% block contents %}
+<div style="position: fixed; width:100%; height:3rem; left:0rem; text-align: center; font-size: 1.5rem; padding-top: 0.2rem; background-color: #FCF7F6;   font-family: 'Black Han Sans', sans-serif; font-weight: 200; font-style: normal;"> 오늘의 성경 </div>
+
+
+<br/><br/><br/><br/>
+
+<div style="display: flex; justify-content: space-evenly;">
+    {% if rand %}
+        <div style="  font-family: 'Jua', sans-serif; font-weight: 400; font-style: normal;">{{ rand.ki|linebreaks }} </div><br/><br/><br/>
+
+    {% endif %}
+</div>
+<div style="display: flex; justify-content: space-evenly;">
+    {% if rand %}
+    <div style="font-family: 'Do Hyeon', sans-serif; font-weight: 400; font-style: normal;">{{ rand.book }} {{ rand.jang }}</div><br/><br/><br/>
+    {% endif %}
+</div>
+
+<div>
+    <div class="container-fluid" style="display: flex; justify-content: space-evenly;">
+        <a style = "text-decoration: none; color: inherit;" href="{% url 'page' %}"><span class="material-symbols-outlined" style="font-size:2.7rem;">dictionary</span></a>
+        <a style = "text-decoration: none; color: inherit;" href="{% url 'home' %}"><span class="material-symbols-outlined" style="font-size:2.7rem;">fact_check</span></a>
+    </div>
+    <button  type="button" onclick="location.href='{% url 'search_nav' %}'" style="margin: 2rem 1rem; width: 90%; display: flex; justify-content: space-evenly; background-color: #FCF7F6;">
+        <a style="margin-top: 0.6rem;">검색하기 </a> <span class="material-symbols-outlined" style="font-size:2.7rem;">search</span>
+    </button>
+</div>
+
+{% endblock %}

@@ -1,0 +1,85 @@
+{% extends "templates/main/base.html" %}
+
+{% block contents %}
+셀렉트 페이지 <br/>
+
+<form class="d-flex" method="POST" action="{% url 'selected_page' %}">
+    {% csrf_token %}
+        <div style="display: flex; justify-content: space-evenly; ">
+                <div>
+                        구약 <br>
+                        <input style = "width: 90%" type="submit" name="submit" value="창세기">
+                        <input type="submit" name="submit" value="출애굽기">
+                        <input type="submit" name="submit" value="레위기">
+                        <input type="submit" name="submit" value="민수기">
+                        <input type="submit" name="submit" value="신명기">
+                        <input type="submit" name="submit" value="여호수아">
+                        <input type="submit" name="submit" value="사사기">
+                        <input type="submit" name="submit" value="룻기">
+                        <input type="submit" name="submit" value="사무엘상">
+                        <input type="submit" name="submit" value="사무엘하">
+                        <input type="submit" name="submit" value="열왕기상">
+                        <input type="submit" name="submit" value="열왕기하">
+                        <input type="submit" name="submit" value="역대상">
+                        <input type="submit" name="submit" value="역대하">
+                        <input type="submit" name="submit" value="에스라">
+                        <input type="submit" name="submit" value="느헤미야">
+                        <input type="submit" name="submit" value="에스더">
+                        <input type="submit" name="submit" value="욥기">
+                        <input type="submit" name="submit" value="시편">
+                        <input type="submit" name="submit" value="잠언">
+                        <input type="submit" name="submit" value="전도서">
+                        <input type="submit" name="submit" value="아가">
+                        <input type="submit" name="submit" value="이사야">
+                        <input type="submit" name="submit" value="예레미야">
+                        <input type="submit" name="submit" value="예레미야애가">
+                        <input type="submit" name="submit" value="에스겔">
+                        <input type="submit" name="submit" value="다니엘">
+                        <input type="submit" name="submit" value="호세아">
+                        <input type="submit" name="submit" value="요엘">
+                        <input type="submit" name="submit" value="아모스">
+                        <input type="submit" name="submit" value="오바댜">
+                        <input type="submit" name="submit" value="요나">
+                        <input type="submit" name="submit" value="미가">
+                        <input type="submit" name="submit" value="나훔">
+                        <input type="submit" name="submit" value="하박국">
+                        <input type="submit" name="submit" value="스바냐">
+                        <input type="submit" name="submit" value="학개">
+                        <input type="submit" name="submit" value="스가랴">
+                        <input type="submit" name="submit" value="말라기">
+                </div>
+                <div>
+                        신약 <br>
+                        <input type="submit" name="submit" value="마태복음">
+                        <input type="submit" name="submit" value="마가복음">
+                        <input type="submit" name="submit" value="누가복음">
+                        <input type="submit" name="submit" value="요한복음">
+                        <input type="submit" name="submit" value="사도행전">
+                        <input type="submit" name="submit" value="로마서">
+                        <input type="submit" name="submit" value="고린도전서">
+                        <input type="submit" name="submit" value="고린도후서">
+                        <input type="submit" name="submit" value="갈라디아서">
+                        <input type="submit" name="submit" value="에베소서">
+                        <input type="submit" name="submit" value="마가복음">
+                        <input type="submit" name="submit" value="빌립보서">
+                        <input type="submit" name="submit" value="골로새서">
+                        <input type="submit" name="submit" value="데살로니가전서">
+                        <input type="submit" name="submit" value="데살로니가후서">
+                        <input type="submit" name="submit" value="디모데전서">
+                        <input type="submit" name="submit" value="디모데후서">
+                        <input type="submit" name="submit" value="디도서">
+                        <input type="submit" name="submit" value="빌레몬서">
+                        <input type="submit" name="submit" value="히브리서">
+                        <input type="submit" name="submit" value="야고보서">
+                        <input type="submit" name="submit" value="베드로전서">
+                        <input type="submit" name="submit" value="베드로후서">
+                        <input type="submit" name="submit" value="요한1서">
+                        <input type="submit" name="submit" value="요한2서">
+                        <input type="submit" name="submit" value="요한3서">
+                        <input type="submit" name="submit" value="유다서">
+                        <input type="submit" name="submit" value="요한계시록">
+                </div>
+        </div>
+</form>
+
+{% endblock %}

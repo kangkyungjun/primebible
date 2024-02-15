@@ -1,0 +1,13 @@
+{% extends "templates/main/base.html" %}
+
+{% block contents %}
+        {% if searched %}
+                <h1> 검색어 {{ searched }} </h1>
+                <br>
+                {% for bible in bibles %}
+                        <a style="text-decoration: none; color: inherit;" href="{% url 'detail' bible.id %}">{{ bible.book }}  {{ bible.jang }} </a> <br>
+                {% endfor %}
+        {% else %}
+                <h1> 검색어를 입력해주세요. </h1>
+        {% endif %}
+{% endblock %}

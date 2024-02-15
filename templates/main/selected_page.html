@@ -1,0 +1,13 @@
+{% extends "templates/main/base.html" %}
+
+{% block contents %}
+
+{% if submit %}
+        <h1> {{ submit }} </h1>
+        <br>
+        {% for bible in bible_select %}
+                <a style = "text-decoration: none; color: inherit;" href="{% url 'detail' bible.id %}">{{ bible.book }}  {{ bible.jang }} </a> <br>
+        {% endfor %}
+{% endif %}
+
+{% endblock %}
