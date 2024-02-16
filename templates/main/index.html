@@ -1,31 +1,60 @@
 {% extends "templates/main/base.html" %}
 
 {% block contents %}
-<div style="position: fixed; width:100%; height:3rem; left:0rem; text-align: center; font-size: 1.5rem; padding-top: 0.2rem; background-color: #FCF7F6;   font-family: 'Black Han Sans', sans-serif; font-weight: 200; font-style: normal;"> 오늘의 성경 </div>
+<div style="position: fixed; width:100%; height:3rem; left:0rem; text-align: center; font-size: 1.5rem; padding-top: 0.35rem; background-color: #FCF7F6;   font-family: 'Black Han Sans', sans-serif; font-weight: 200; font-style: normal;"> 오늘의 성경 </div>
 
 
 <br/><br/><br/><br/>
 
 <div style="display: flex; justify-content: space-evenly;">
-    {% if rand %}
-        <div style="  font-family: 'Jua', sans-serif; font-weight: 400; font-style: normal;">{{ rand.ki|linebreaks }} </div><br/><br/><br/>
+    <div style="padding: 2rem 2rem; margin: 2rem 10px; font-weight: bold; color: #565656; background: #FCF7F6; box-shadow: 0px 0px 0px 10px  #FCF7F6; border: dashed 2px #FFC06E; border-radius: 8px;">
+        {% if rand %}
+        <div style="font-family: 'Jua', sans-serif; font-weight: 400; font-style: normal; font-size: 1.4rem;">{{ rand.ki|linebreaks }} </div><br/><br/><br/>
+        {% endif %}
 
-    {% endif %}
+        <div style="display: flex; justify-content: space-evenly;">
+            {% if rand %}
+            <div style="font-family: 'Do Hyeon', sans-serif; font-weight: 400; font-style: normal; font-size: 1.2rem;">{{ rand.book }} {{ rand.jang }}</div><br/><br/><br/>
+            {% endif %}
+        </div>
+    </div>
 </div>
-<div style="display: flex; justify-content: space-evenly;">
-    {% if rand %}
-    <div style="font-family: 'Do Hyeon', sans-serif; font-weight: 400; font-style: normal;">{{ rand.book }} {{ rand.jang }}</div><br/><br/><br/>
-    {% endif %}
-</div>
+
+    <br><br><br>
 
 <div>
     <div class="container-fluid" style="display: flex; justify-content: space-evenly;">
-        <a style = "text-decoration: none; color: inherit;" href="{% url 'page' %}"><span class="material-symbols-outlined" style="font-size:2.7rem;">dictionary</span></a>
-        <a style = "text-decoration: none; color: inherit;" href="{% url 'home' %}"><span class="material-symbols-outlined" style="font-size:2.7rem;">fact_check</span></a>
+        <div>
+            <button type="button" onclick="location.href='{% url 'select' %}'" style="display: table; text-decoration: none; color: inherit; font-size:5rem; font-weight: 100; background-color: #FCF7F6; border: 0.1rem solid lightgray; border-radius: 1rem; padding: 1rem;">
+                <div><span class="material-symbols-outlined" style="vertical-align: middle; font-size:4rem;">dictionary</span></div>
+                <div><a style="vertical-align: middle; font-size:1.3rem; font-color: gray; font-family: 'Jua', sans-serif; font-weight: 400; font-style: normal;">읽기</a></div>
+            </button>
+        </div>
+        <div>
+            <button type="button" onclick="location.href='{% url 'page' %}'" style="display: table; text-decoration: none; color: inherit; font-size:3rem; font-weight: 100; background-color: #FCF7F6;  border: 0.1rem solid lightgray; border-radius: 1rem; padding: 1rem;">
+                <div><span class="material-symbols-outlined" style="vertical-align: middle; font-size:4rem;">fact_check</span></div>
+                <div><a style="vertical-align: middle; font-size:1.3rem; font-color: gray; font-family: 'Jua', sans-serif; font-weight: 400; font-style: normal;">책</a></div>
+            </button>
+        </div>
     </div>
-    <button  type="button" onclick="location.href='{% url 'search_nav' %}'" style="margin: 2rem 1rem; width: 90%; display: flex; justify-content: space-evenly; background-color: #FCF7F6;">
-        <a style="margin-top: 0.6rem;">검색하기 </a> <span class="material-symbols-outlined" style="font-size:2.7rem;">search</span>
+
+    <br><br><br>
+
+    <button  type="button" onclick="location.href='{% url 'search_nav' %}'" style="margin: 2rem 1rem; width: 90%; display: flex; justify-content: space-evenly; background-color: #FCF7F6; border: none;">
+        <a style="margin-top: 0.6rem; font-family: 'Jua', sans-serif; font-weight: 400; font-style: normal; font-size: 1.4rem;">검색하기 </a> <span class="material-symbols-outlined" style="font-size:2.7rem; ">search</span>
     </button>
 </div>
 
+<div>
+
+
+</div>
+
+ <br><br><br>
+
+<div style="display: flex; justify-content: space-evenly; font-size:0.7rem; font-color: lightgray;">
+    ©2024 TeamPrime all rights reserved<br>
+    문의사항은 아래 이메일로 연락바랍니다.<br>
+    primenetworks.corp@gmail.com
+</div>
 {% endblock %}
