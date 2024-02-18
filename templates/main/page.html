@@ -17,11 +17,11 @@
 <div>
     <ul style = "display:flex; list-style:none;">
         {% if page_obj.has_previous %}
-        <a style="text-decoration:none; color: inherit; position: fixed; bottom: 10rem; left: 2rem; height: 1.5rem; " href="?page={{page_obj.previous_page_number}}"> <span style="font-size:3.2rem; background-color: gray; opacity: 0.4; border-radius: 50%" class="material-symbols-outlined"> navigate_before</span> </a>
+        <a style="text-decoration:none; color: inherit; position: fixed; bottom: 10rem; left: 2rem; height: 1.5rem; " href="?page={{page_obj.previous_page_number}}"> <span style="font-size:3.2rem; background-color: #786C70; opacity: 0.8; border-radius: 50%" class="material-symbols-outlined"> navigate_before</span> </a>
         {% endif %}
 
         {% if page_obj.has_next %}
-        <a style="text-decoration:none; color: inherit; position: fixed; bottom: 10rem; right: 2rem; height: 1.5rem; " href="?page={{page_obj.next_page_number}}"> <span style="font-size:3.2rem; background-color: gray; opacity: 0.4; border-radius: 50%" class="material-symbols-outlined">navigate_next</span> </a>
+        <a style="text-decoration:none; color: inherit; position: fixed; bottom: 10rem; right: 2rem; height: 1.5rem; " href="?page={{page_obj.next_page_number}}"> <span style="font-size:3.2rem; background-color: #786C70; opacity: 0.8; border-radius: 50%" class="material-symbols-outlined">navigate_next</span> </a>
         {% endif %}
     </ul>
 </div>
