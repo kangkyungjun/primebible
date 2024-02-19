@@ -1,87 +1,139 @@
 {% extends "templates/main/base.html" %}
 
 {% block contents %}
-<div style="position: fixed; width:100%; height:3rem; left:0rem; text-align: center; font-size: 1.5rem; padding-top: 0.35rem; background-color: #FCF7F6;   font-family: 'Black Han Sans', sans-serif; font-weight: 200; font-style: normal;"> 색인 </div>
+<style>
+.container1 {
+        display: flex;
+        justify-content: space-evenly;
+}
 
+.container1 > div {
+        padding-left:2rem;
+        text-align: center;
+        width: 100%;
+}
+
+.container1 > div > input{
+        width: 90%;
+        background-color: #E1DBD4;
+        border: 0px solid #2C2A29;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 1.2rem;
+        color: #2C2A29;
+}
+</style>
+<div style="position: fixed; width:100%; height:3rem; left:0rem; text-align: center; font-size: 1.5rem; padding-top: 0.35rem; background-color: #243832; color: #B5DBBB; font-family: 'Noto Sans KR', sans-serif; font-optical-sizing: auto; font-weight: 500; font-style: normal;"> 색인 </div>
 <br><br><br>
 
-<form class="d-flex" method="POST" action="{% url 'selected_page' %}">
+<form method="POST" action="{% url 'selected_page' %}">
     {% csrf_token %}
-        <div style="display: flex; justify-content: space-evenly; ">
+        <div class="container1">
                 <div>
-                        <div style="padding-left: 40%; font-family: 'Jua', sans-serif; font-weight: 400; font-style: normal; font-size: 1.4rem;">구약</div> <br>
-                        <input style = "width: 90%" type="submit" name="submit" value="창세기">
-                        <input style = "width: 90%"  type="submit" name="submit" value="출애굽기">
-                        <input style = "width: 90%"  type="submit" name="submit" value="레위기">
-                        <input style = "width: 90%"  type="submit" name="submit" value="민수기">
-                        <input style = "width: 90%"  type="submit" name="submit" value="신명기">
-                        <input style = "width: 90%"  type="submit" name="submit" value="여호수아">
-                        <input style = "width: 90%"  type="submit" name="submit" value="사사기">
-                        <input style = "width: 90%"  type="submit" name="submit" value="룻기">
-                        <input style = "width: 90%"  type="submit" name="submit" value="사무엘상">
-                        <input style = "width: 90%"  type="submit" name="submit" value="사무엘하">
-                        <input style = "width: 90%"  type="submit" name="submit" value="열왕기상">
-                        <input style = "width: 90%"  type="submit" name="submit" value="열왕기하">
-                        <input style = "width: 90%"  type="submit" name="submit" value="역대상">
-                        <input style = "width: 90%"  type="submit" name="submit" value="역대하">
-                        <input style = "width: 90%"  type="submit" name="submit" value="에스라">
-                        <input style = "width: 90%"  type="submit" name="submit" value="느헤미야">
-                        <input style = "width: 90%"  type="submit" name="submit" value="에스더">
-                        <input style = "width: 90%"  type="submit" name="submit" value="욥기">
-                        <input style = "width: 90%"  type="submit" name="submit" value="시편">
-                        <input style = "width: 90%"  type="submit" name="submit" value="잠언">
-                        <input style = "width: 90%"  type="submit" name="submit" value="전도서">
-                        <input style = "width: 90%"  type="submit" name="submit" value="아가">
-                        <input style = "width: 90%"  type="submit" name="submit" value="이사야">
-                        <input style = "width: 90%"  type="submit" name="submit" value="예레미야">
-                        <input style = "width: 90%"  type="submit" name="submit" value="예레미야애가">
-                        <input style = "width: 90%"  type="submit" name="submit" value="에스겔">
-                        <input style = "width: 90%"  type="submit" name="submit" value="다니엘">
-                        <input style = "width: 90%"  type="submit" name="submit" value="호세아">
-                        <input style = "width: 90%"  type="submit" name="submit" value="요엘">
-                        <input style = "width: 90%"  type="submit" name="submit" value="아모스">
-                        <input style = "width: 90%"  type="submit" name="submit" value="오바댜">
-                        <input style = "width: 90%"  type="submit" name="submit" value="요나">
-                        <input style = "width: 90%"  type="submit" name="submit" value="미가">
-                        <input style = "width: 90%"  type="submit" name="submit" value="나훔">
-                        <input style = "width: 90%"  type="submit" name="submit" value="하박국">
-                        <input style = "width: 90%"  type="submit" name="submit" value="스바냐">
-                        <input style = "width: 90%"  type="submit" name="submit" value="학개">
-                        <input style = "width: 90%"  type="submit" name="submit" value="스가랴">
-                        <input style = "width: 90%"  type="submit" name="submit" value="말라기">
+                        <div style="font-family: 'Noto Sans KR', sans-serif; font-optical-sizing: auto; font-weight: 600; font-style: normal; font-size: 1.4rem; color: #2C2A29;">구약</div> <br>
+                        <input type="submit" name="submit" value="창세기"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="출애굽기"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="레위기"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="민수기"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="신명기"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="여호수아"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="사사기"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="룻기"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="사무엘상"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="사무엘하"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="열왕기상"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="열왕기하"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="역대상"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="역대하"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="에스라"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="느헤미야"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="에스더"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="욥기"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="시편"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="잠언"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="전도서"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="아가"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="이사야"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="예레미야"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="예레미야애가"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="에스겔"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="다니엘"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="호세아"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="요엘"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="아모스"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="오바댜"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="요나"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="미가"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="나훔"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="하박국"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="스바냐"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="학개"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="스가랴"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="말라기"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
                 </div>
                 <div>
-                        <div style="padding-left: 40%; font-family: 'Jua', sans-serif; font-weight: 400; font-style: normal; font-size: 1.4rem;">신약</div> <br>
-                        <input style = "width: 90%"  type="submit" name="submit" value="마태복음">
-                        <input style = "width: 90%"  type="submit" name="submit" value="마가복음">
-                        <input style = "width: 90%"  type="submit" name="submit" value="누가복음">
-                        <input style = "width: 90%"  type="submit" name="submit" value="요한복음">
-                        <input style = "width: 90%"  type="submit" name="submit" value="사도행전">
-                        <input style = "width: 90%"  type="submit" name="submit" value="로마서">
-                        <input style = "width: 90%"  type="submit" name="submit" value="고린도전서">
-                        <input style = "width: 90%"  type="submit" name="submit" value="고린도후서">
-                        <input style = "width: 90%"  type="submit" name="submit" value="갈라디아서">
-                        <input style = "width: 90%"  type="submit" name="submit" value="에베소서">
-                        <input style = "width: 90%"  type="submit" name="submit" value="마가복음">
-                        <input style = "width: 90%"  type="submit" name="submit" value="빌립보서">
-                        <input style = "width: 90%"  type="submit" name="submit" value="골로새서">
-                        <input style = "width: 90%"  type="submit" name="submit" value="데살로니가전서">
-                        <input style = "width: 90%"  type="submit" name="submit" value="데살로니가후서">
-                        <input style = "width: 90%"  type="submit" name="submit" value="디모데전서">
-                        <input style = "width: 90%"  type="submit" name="submit" value="디모데후서">
-                        <input style = "width: 90%"  type="submit" name="submit" value="디도서">
-                        <input style = "width: 90%"  type="submit" name="submit" value="빌레몬서">
-                        <input style = "width: 90%"  type="submit" name="submit" value="히브리서">
-                        <input style = "width: 90%"  type="submit" name="submit" value="야고보서">
-                        <input style = "width: 90%"  type="submit" name="submit" value="베드로전서">
-                        <input style = "width: 90%"  type="submit" name="submit" value="베드로후서">
-                        <input style = "width: 90%"  type="submit" name="submit" value="요한1서">
-                        <input style = "width: 90%"  type="submit" name="submit" value="요한2서">
-                        <input style = "width: 90%"  type="submit" name="submit" value="요한3서">
-                        <input style = "width: 90%"  type="submit" name="submit" value="유다서">
-                        <input style = "width: 90%"  type="submit" name="submit" value="요한계시록">
+                        <div style="font-family: 'Noto Sans KR', sans-serif; font-optical-sizing: auto; font-weight: 600; font-style: normal; font-size: 1.4rem; color: #2C2A29;">신약</div> <br>
+                        <input type="submit" name="submit" value="마태복음"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="마가복음"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="누가복음"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="요한복음"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="사도행전"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="로마서"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="고린도전서"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="고린도후서"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="갈라디아서"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="에베소서"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="마가복음"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="빌립보서"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="골로새서"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="데살로니가전서"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="데살로니가후서"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="디모데전서"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="디모데후서"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="디도서"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="빌레몬서"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="히브리서"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="야고보서"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="베드로전서"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="베드로후서"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="요한1서"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="요한2서"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="요한3서"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="유다서"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
+                        <input type="submit" name="submit" value="요한계시록"><div style="padding-top: 0.2rem; padding-bottom: 0.2rem;"></div>
                 </div>
         </div>
 </form>
 
+<!-- Span bottom edge -->
+<div class="nav" style="position: fixed; left: 0px; bottom: 0px; width:100%; height:3rem; background-color: #F6F5F0; ">
+    <div class="container-fluid" style="display: flex; justify-content: space-evenly;">
+        <div>
+            <button type="button" onclick="location.href='{% url 'home' %}'" style="display: table; text-decoration: none; color: inherit; font-size:3rem; font-weight: 100; background-color: #F6F5F0; border: none;">
+                <div><span class="material-symbols-outlined" style="vertical-align: middle; font-size:1.6rem; color: gray">home</span></div>
+                <div><a style="vertical-align: middle; font-size:0.9rem; color: gray">홈</a></div>
+            </button>
+        </div>
+        <div>
+            <button type="button" onclick="location.href='{% url 'page' %}'" style="display: table; text-decoration: none; color: inherit; font-size:3rem; font-weight: 100; background-color: #F6F5F0; border: none;">
+                <div><span class="material-symbols-outlined" style="vertical-align: middle; font-size:1.6rem; color: gray">dictionary</span></div>
+                <div><a style="vertical-align: middle; font-size:0.9rem; color: gray">읽기</a></div>
+            </button>
+        </div>
+        <div>
+            <button type="button" onclick="location.href='{% url 'select' %}'" style="display: table; text-decoration: none; color: inherit; font-size:3rem; font-weight: 100; background-color: #F6F5F0; border: none;">
+                <div><span class="material-symbols-outlined" style="vertical-align: middle; font-size:1.6rem; color: black">fact_check</span></div>
+                <div><a style="vertical-align: middle; font-size:0.9rem; color: black">책</a></div>
+            </button>
+        </div>
+        <div>
+            <button type="button" onclick="location.href='{% url 'search_nav' %}'" style="display: table; text-decoration: none; color: inherit; font-size:3rem; font-weight: 100; background-color: #F6F5F0; border: none;">
+                <div><span class="material-symbols-outlined" style="vertical-align: middle; font-size:1.6rem; color: gray">search</span></div>
+                <div><a style="vertical-align: middle; font-size:0.9rem; color: gray">찾기</a></div>
+            </button>
+        </div>
+    </div>
+</div>
 {% endblock %}

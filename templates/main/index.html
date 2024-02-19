@@ -4,57 +4,55 @@
 <div style="position: fixed; width:100%; height:3rem; left:0rem; text-align: center; font-size: 1.5rem; padding-top: 0.35rem; background-color: #243832; color: #B5DBBB; font-family: 'Noto Sans KR', sans-serif; font-optical-sizing: auto; font-weight: 500; font-style: normal;"> 오늘의 성경 </div>
 
 
-<br/><br/><br/><br/>
+<br/><br/><br/>
 
 <div style="display: flex; justify-content: space-evenly; font-align: center;">
     <div style="width: 90%; padding: 2rem 2rem; font-weight: bold; color: black; background-color: #E1DBD4; box-shadow: 0px 0px 0px 10px #E1DBD4; border-radius: 8px; ">
         {% if rand %}
-        <div style="font-family: 'Noto Sans KR', sans-serif; font-optical-sizing: auto; font-weight: 400; font-style: normal; font-size: 1.4rem; text-align: center;">{{ rand.ki|linebreaks }} </div><br/><br/><br/>
+        <div style="font-family: 'Noto Sans KR', sans-serif; font-optical-sizing: auto; font-weight: 400; font-style: normal; font-size: 1.3rem; text-align: center;">{{ rand.ki|linebreaks }} </div><br/><br/>
         {% endif %}
 
         <div>
             {% if rand %}
-            <div style="font-family: 'Noto Sans KR', sans-serif; font-weight: 400; font-style: normal; font-size: 1.1rem; text-align: right; padding-right: 2rem;">{{ rand.book }} {{ rand.jang }}</div>
+            <div style="font-family: 'Noto Sans KR', sans-serif; font-weight: 400; font-style: normal; font-size: 1.0rem; text-align: right; padding-right: 2rem;">{{ rand.book }} {{ rand.jang }}</div>
             {% endif %}
         </div>
     </div>
 </div>
 
-    <br><br><br>
-
-<div>
-    <div class="container-fluid" style="display: flex; justify-content: space-evenly;">
-        <div>
-            <button type="button" onclick="location.href='{% url 'select' %}'" style="display: table; text-decoration: none; color: inherit; font-size:5rem; font-weight: 100; background-color: #FCF7F6; border: 0.1rem solid lightgray; border-radius: 1rem; padding: 1rem;">
-                <div><span class="material-symbols-outlined" style="vertical-align: middle; font-size:4rem;">dictionary</span></div>
-                <div><a style="vertical-align: middle; font-size:1.3rem; font-color: gray; font-family: 'Jua', sans-serif; font-weight: 400; font-style: normal;">읽기</a></div>
-            </button>
-        </div>
-        <div>
-            <button type="button" onclick="location.href='{% url 'page' %}'" style="display: table; text-decoration: none; color: inherit; font-size:3rem; font-weight: 100; background-color: #FCF7F6;  border: 0.1rem solid lightgray; border-radius: 1rem; padding: 1rem;">
-                <div><span class="material-symbols-outlined" style="vertical-align: middle; font-size:4rem;">fact_check</span></div>
-                <div><a style="vertical-align: middle; font-size:1.3rem; font-color: gray; font-family: 'Jua', sans-serif; font-weight: 400; font-style: normal;">책</a></div>
-            </button>
-        </div>
-    </div>
-
-    <br><br><br>
-
-    <button  type="button" onclick="location.href='{% url 'search_nav' %}'" style="margin: 2rem 1rem; width: 90%; display: flex; justify-content: space-evenly; background-color: #FCF7F6; border: none;">
-        <a style="margin-top: 0.6rem; font-family: 'Jua', sans-serif; font-weight: 400; font-style: normal; font-size: 1.4rem;">검색하기 </a> <span class="material-symbols-outlined" style="font-size:2.7rem; ">search</span>
-    </button>
-</div>
-
-<div>
-
-
-</div>
-
- <br><br><br>
-
-<div style="display: flex; justify-content: space-evenly; font-size:0.7rem; font-color: lightgray;">
+<div style="display: flex; justify-content: space-evenly; padding-top: 25rem; font-size:0.7rem; font-color: lightgray;">
     ©2024 TeamPrime all rights reserved<br>
     문의사항은 아래 이메일로 연락바랍니다.<br>
     primenetworks.corp@gmail.com
+</div>
+
+<!-- Span bottom edge -->
+<div class="nav" style="position: fixed; left: 0px; bottom: 0px; width:100%; height:3rem; background-color: #F6F5F0; ">
+    <div class="container-fluid" style="display: flex; justify-content: space-evenly;">
+        <div>
+            <button type="button" onclick="location.href='{% url 'home' %}'" style="display: table; text-decoration: none; color: inherit; font-size:3rem; font-weight: 100; background-color: #F6F5F0; border: none;">
+                <div><span class="material-symbols-outlined" style="vertical-align: middle; font-size:1.6rem; color: black">home</span></div>
+                <div><a style="vertical-align: middle; font-size:0.9rem; color: black">홈</a></div>
+            </button>
+        </div>
+        <div>
+            <button type="button" onclick="location.href='{% url 'page' %}'" style="display: table; text-decoration: none; color: inherit; font-size:3rem; font-weight: 100; background-color: #F6F5F0; border: none;">
+                <div><span class="material-symbols-outlined" style="vertical-align: middle; font-size:1.6rem; color: gray">dictionary</span></div>
+                <div><a style="vertical-align: middle; font-size:0.9rem; color: gray">읽기</a></div>
+            </button>
+        </div>
+        <div>
+            <button type="button" onclick="location.href='{% url 'select' %}'" style="display: table; text-decoration: none; color: inherit; font-size:3rem; font-weight: 100; background-color: #F6F5F0; border: none;">
+                <div><span class="material-symbols-outlined" style="vertical-align: middle; font-size:1.6rem; color: gray">fact_check</span></div>
+                <div><a style="vertical-align: middle; font-size:0.9rem; color: gray">책</a></div>
+            </button>
+        </div>
+        <div>
+            <button type="button" onclick="location.href='{% url 'search_nav' %}'" style="display: table; text-decoration: none; color: inherit; font-size:3rem; font-weight: 100; background-color: #F6F5F0; border: none;">
+                <div><span class="material-symbols-outlined" style="vertical-align: middle; font-size:1.6rem; color: gray">search</span></div>
+                <div><a style="vertical-align: middle; font-size:0.9rem; color: gray">찾기</a></div>
+            </button>
+        </div>
+    </div>
 </div>
 {% endblock %}

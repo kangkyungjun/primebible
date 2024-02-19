@@ -1,13 +1,44 @@
 {% extends "templates/main/base.html" %}
 
 {% block contents %}
-<div style="position: fixed; width:100%; height:3rem; left:0rem; text-align: center; font-size: 1.5rem; padding-top: 0.35rem; background-color: #FCF7F6;   font-family: 'Black Han Sans', sans-serif; font-weight: 200; font-style: normal;"> 검색 </div>
+
+<div style="position: fixed; width:100%; height:3rem; left:0rem; text-align: center; font-size: 1.5rem; padding-top: 0.35rem; background-color: #243832; color: #B5DBBB; font-family: 'Noto Sans KR', sans-serif; font-optical-sizing: auto; font-weight: 500; font-style: normal;"> 검색 </div>
+
 <br><br><br>
 
 <form style="width:100%" class="d-flex" method="POST" action="{% url 'search' %}">
     {% csrf_token %}
     <input class="form-control me-2" type="search" placeholder="성경 찾기" name="searched" aria-label="Search">
-    <button style="width: 40%; border:none; background-color:#FCF7F6; border: 0.1rem solid lightgray; border-radius: 1rem; padding: 1rem;" type="submit"> <span style="font-size:1.4rem; font-color:lightgray;" class="material-symbols-outlined">search</span> </button>
+    <button style="width: 40%; border:none; background-color:#786C70; border-radius: 1rem; padding: 1rem;" type="submit"> <span style="font-size:1.4rem; color: #F6F5F0;" class="material-symbols-outlined">search</span> </button>
 </form>
 
+<!-- Span bottom edge -->
+<div class="nav" style="position: fixed; left: 0px; bottom: 0px; width:100%; height:3rem; background-color: #F6F5F0; ">
+    <div class="container-fluid" style="display: flex; justify-content: space-evenly;">
+        <div>
+            <button type="button" onclick="location.href='{% url 'home' %}'" style="display: table; text-decoration: none; color: inherit; font-size:3rem; font-weight: 100; background-color: #F6F5F0; border: none;">
+                <div><span class="material-symbols-outlined" style="vertical-align: middle; font-size:1.6rem; color: gray">home</span></div>
+                <div><a style="vertical-align: middle; font-size:0.9rem; color: gray">홈</a></div>
+            </button>
+        </div>
+        <div>
+            <button type="button" onclick="location.href='{% url 'page' %}'" style="display: table; text-decoration: none; color: inherit; font-size:3rem; font-weight: 100; background-color: #F6F5F0; border: none;">
+                <div><span class="material-symbols-outlined" style="vertical-align: middle; font-size:1.6rem; color: gray">dictionary</span></div>
+                <div><a style="vertical-align: middle; font-size:0.9rem; color: gray">읽기</a></div>
+            </button>
+        </div>
+        <div>
+            <button type="button" onclick="location.href='{% url 'select' %}'" style="display: table; text-decoration: none; color: inherit; font-size:3rem; font-weight: 100; background-color: #F6F5F0; border: none;">
+                <div><span class="material-symbols-outlined" style="vertical-align: middle; font-size:1.6rem; color: gray">fact_check</span></div>
+                <div><a style="vertical-align: middle; font-size:0.9rem; color: gray">책</a></div>
+            </button>
+        </div>
+        <div>
+            <button type="button" onclick="location.href='{% url 'search_nav' %}'" style="display: table; text-decoration: none; color: inherit; font-size:3rem; font-weight: 100; background-color: #F6F5F0; border: none;">
+                <div><span class="material-symbols-outlined" style="vertical-align: middle; font-size:1.6rem; color: black">search</span></div>
+                <div><a style="vertical-align: middle; font-size:0.9rem; color: black">찾기</a></div>
+            </button>
+        </div>
+    </div>
+</div>
 {% endblock %}
