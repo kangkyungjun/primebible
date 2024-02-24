@@ -4,16 +4,16 @@
 <div style="position: fixed; width:100%; height:3rem; left:0rem; text-align: center; font-size: 1.5rem; padding-top: 0.35rem; background-color: #243832; color: #B5DBBB; font-family: 'Noto Sans KR', sans-serif; font-optical-sizing: auto; font-weight: 500; font-style: normal;"> 색인 </div>
 {% if submit %}
         <h1> {{ submit }} </h1>
-        <br>
+        <br><br><br><br>
         {% for bible in bible_select %}
                 <a style = "text-decoration: none; color: inherit; padding: 2rem; font-family: 'Noto Sans KR', sans-serif; font-optical-sizing: auto; font-weight: 400; font-style: normal; font-size: 1.1rem; " href="{% url 'detail' bible.id %}"> <div style="border-bottom: 1px solid #786C70"> {{ bible.book }}  {{ bible.jang }}</div> </a>
         {% endfor %}
 {% endif %}
 
-<br>
+<br><br>
 
 <!-- 광고 단위 -->
-<div style="position: fixed; left: 0px; bottom: 3rem; width:100%;">
+<div style="position: fixed; left: 0px; top: 3rem; width:100%;">
 <ins class="kakao_ad_area" style="display:none;" data-ad-unit = "DAN-siFftZZyG2i5HoOh" data-ad-width = "320" data-ad-height = "100"></ins>
 <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
 </div>
