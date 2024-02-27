@@ -52,3 +52,6 @@ def selected_page(request):
         return render(request, 'main/selected_page.html',{'submit': submit, 'bible_select': bible_select} )
     else:
         return render(request, 'main/selected_page.html')
+
+def slide(request):
+    return render(request, 'main/slide.html')

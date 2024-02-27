@@ -30,5 +30,6 @@ urlpatterns = [
     path('detail/<int:post_id>', main.views.detail, name='detail'),
     path('select', main.views.select, name='select'),
     path('selected_page', main.views.selected_page, name='selected_page'),
+    path('slide', main.views.slide, name='slide')
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

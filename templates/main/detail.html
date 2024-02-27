@@ -2,6 +2,41 @@
 
 {% block contents %}
 
+<head>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <!-- Custom CSS -->
+  <style>
+    .swiper-container {
+      position: fixed;
+      width: 20%;
+      bottom: 8rem;
+      height:2rem;
+      right: 1rem;
+    }
+    .swiper-wrapper {
+      width: 1rem;
+    }
+    .swiper-slide {
+      opacity: 0.9;
+      text-align: center;
+      font-size: 0.8rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color:#E1DBD4;
+      border-radius: 5%;
+      font-family: 'Noto Sans KR', sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 500;
+      font-style: normal;
+    }
+    .swiper-slide a {
+      text-decoration:none;
+      color: inherit;
+    }
+  </style>
+</head>
 <div style="position: fixed; width:100%; height:3rem; left:0rem; text-align: center; font-size: 1.5rem; padding-top: 0.35rem; background-color: #243832; color: #B5DBBB; font-family: 'Noto Sans KR', sans-serif; font-optical-sizing: auto; font-weight: 500; font-style: normal;"> {{ bible_detail.book }} {{ bible_detail.jang }} </div>
 
 <br><br>
@@ -15,6 +50,82 @@
 <ins class="kakao_ad_area" style="display:none;" data-ad-unit = "DAN-n5BxNMDIEQe3kSZU" data-ad-width = "320" data-ad-height = "50"></ins>
 <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
 </div>
+
+
+<!-- 슬라이드 배너 -->
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+      <div class="swiper-slide">--구약--</div>
+      <div class="swiper-slide"><a href="/page?page=1">창세기</a></div>
+      <div class="swiper-slide"><a href="/page?page=51">출애굽기</a></div>
+      <div class="swiper-slide"><a href="/page?page=91">레위기</a></div>
+      <div class="swiper-slide"><a href="/page?page=118">민수기</a></div>
+      <div class="swiper-slide"><a href="/page?page=154">신명기</a></div>
+      <div class="swiper-slide"><a href="/page?page=188">여호수아</a></div>
+      <div class="swiper-slide"><a href="/page?page=212">사사기</a></div>
+      <div class="swiper-slide"><a href="/page?page=233">룻기</a></div>
+      <div class="swiper-slide"><a href="/page?page=237">사무엘상</a></div>
+      <div class="swiper-slide"><a href="/page?page=268">사무엘하</a></div>
+      <div class="swiper-slide"><a href="/page?page=292">열왕기상</a></div>
+      <div class="swiper-slide"><a href="/page?page=314">열왕기하</a></div>
+      <div class="swiper-slide"><a href="/page?page=339">역대상</a></div>
+      <div class="swiper-slide"><a href="/page?page=368">역대하</a></div>
+      <div class="swiper-slide"><a href="/page?page=404">에스라</a></div>
+      <div class="swiper-slide"><a href="/page?page=414">느헤미야</a></div>
+      <div class="swiper-slide"><a href="/page?page=427">에스더</a></div>
+      <div class="swiper-slide"><a href="/page?page=437">욥기</a></div>
+      <div class="swiper-slide"><a href="/page?page=479">시편</a></div>
+      <div class="swiper-slide"><a href="/page?page=629">잠언</a></div>
+      <div class="swiper-slide"><a href="/page?page=660">전도서</a></div>
+      <div class="swiper-slide"><a href="/page?page=672">아가</a></div>
+      <div class="swiper-slide"><a href="/page?page=680">이사야</a></div>
+      <div class="swiper-slide"><a href="/page?page=746">예레미야</a></div>
+      <div class="swiper-slide"><a href="/page?page=798">예레미야애가</a></div>
+      <div class="swiper-slide"><a href="/page?page=803">에스겔</a></div>
+      <div class="swiper-slide"><a href="/page?page=851">다니엘</a></div>
+      <div class="swiper-slide"><a href="/page?page=863">호세아</a></div>
+      <div class="swiper-slide"><a href="/page?page=877">요엘</a></div>
+      <div class="swiper-slide"><a href="/page?page=880">아모스</a></div>
+      <div class="swiper-slide"><a href="/page?page=889">오바댜</a></div>
+      <div class="swiper-slide"><a href="/page?page=890">요나</a></div>
+      <div class="swiper-slide"><a href="/page?page=894">미가</a></div>
+      <div class="swiper-slide"><a href="/page?page=901">나훔</a></div>
+      <div class="swiper-slide"><a href="/page?page=904">하박국</a></div>
+      <div class="swiper-slide"><a href="/page?page=907">스바냐</a></div>
+      <div class="swiper-slide"><a href="/page?page=910">학개</a></div>
+      <div class="swiper-slide"><a href="/page?page=912">스가랴</a></div>
+      <div class="swiper-slide"><a href="/page?page=926">말라기</a></div>
+      <div class="swiper-slide">--신약--</div>
+      <div class="swiper-slide"><a href="/page?page=930">마태복음</a></div>
+      <div class="swiper-slide"><a href="/page?page=958">마가복음</a></div>
+      <div class="swiper-slide"><a href="/page?page=974">누가복음</a></div>
+      <div class="swiper-slide"><a href="/page?page=998">요한복음</a></div>
+      <div class="swiper-slide"><a href="/page?page=1019">사도행전</a></div>
+      <div class="swiper-slide"><a href="/page?page=1047">로마서</a></div>
+      <div class="swiper-slide"><a href="/page?page=1063">고린도전서</a></div>
+      <div class="swiper-slide"><a href="/page?page=1079">고린도후서</a></div>
+      <div class="swiper-slide"><a href="/page?page=1092">갈라디아서</a></div>
+      <div class="swiper-slide"><a href="/page?page=1098">에베소서</a></div>
+      <div class="swiper-slide"><a href="/page?page=1104">빌립보서</a></div>
+      <div class="swiper-slide"><a href="/page?page=1108">골로새서</a></div>
+      <div class="swiper-slide"><a href="/page?page=1112">데살로니가전서</a></div>
+      <div class="swiper-slide"><a href="/page?page=1117">데살로니가후서</a></div>
+      <div class="swiper-slide"><a href="/page?page=1120">디모데전서</a></div>
+      <div class="swiper-slide"><a href="/page?page=1126">디모데후서</a></div>
+      <div class="swiper-slide"><a href="/page?page=1130">디도서</a></div>
+      <div class="swiper-slide"><a href="/page?page=1133">빌레몬서</a></div>
+      <div class="swiper-slide"><a href="/page?page=1134">히브리서</a></div>
+      <div class="swiper-slide"><a href="/page?page=1147">야고보서</a></div>
+      <div class="swiper-slide"><a href="/page?page=1152">베드로전서</a></div>
+      <div class="swiper-slide"><a href="/page?page=1157">베드로후서</a></div>
+      <div class="swiper-slide"><a href="/page?page=1160">요한1서</a></div>
+      <div class="swiper-slide"><a href="/page?page=1165">요한2서</a></div>
+      <div class="swiper-slide"><a href="/page?page=1166">요한3서</a></div>
+      <div class="swiper-slide"><a href="/page?page=1167">유다서</a></div>
+      <div class="swiper-slide"><a href="/page?page=1168">요한계시록</a></div>
+  </div>
+</div>
+
 
 <!-- Span bottom edge -->
 <div class="nav" style="position: fixed; left: 0px; bottom: 0px; width:100%; height:3rem; background-color: #F6F5F0; ">
@@ -45,4 +156,21 @@
         </div>
     </div>
 </div>
+
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    loop: true,
+    autoplay: {
+      delay: 9999999999,
+      disableOnInteraction: false,
+      slidesPerView: 10,
+    },
+  });
+</script>
+
 {% endblock %}
